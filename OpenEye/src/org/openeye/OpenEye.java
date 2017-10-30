@@ -297,19 +297,6 @@ public class OpenEye {
 		Picker.assignPicker(jb, t);
 		
 		f.setVisible(true);
-		 
-		for (;;) {
-			String pattern = "class";
-			String text = OpenEye.t.getText();        
-			int index = text.indexOf(pattern);
-			while(index >= 0){
-			    try {                
-			        OpenEye.t.getHighlighter().addHighlight(index, index + pattern.length(), DefaultHighlighter.DefaultPainter);
-			        index = text.indexOf(pattern, index + pattern.length());            
-			    } catch (BadLocationException ex) {
-			        ex.printStackTrace();
-			    }
-			}
 		}
 	}
 }
